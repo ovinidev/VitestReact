@@ -11,10 +11,9 @@ export const Button = ({ text, ...rest }: ButtonProps) => {
   return (
     <ChakraButton
       data-testid="button"
-      h="150px"
-      w="300px"
-      color="#222"
-      bg="pink.700"
+      p="1.5rem 2rem"
+      color="#0f0f0f"
+      bg="pink.500"
       {...rest}
     >
       {text}

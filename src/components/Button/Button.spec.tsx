@@ -25,7 +25,9 @@ describe("Button", () => {
       <Button onClick={handleClick} text="Adicionar" />
     );
 
-    fireEvent.click(getByTestId(buttonTestId));
+    const AddButton = getByTestId(buttonTestId);
+
+    fireEvent.click(AddButton);
 
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
@@ -34,10 +36,9 @@ describe("Button", () => {
     const { getByTestId } = render(<Button text="Adicionar" />);
 
     expect(getByTestId(buttonTestId)).toHaveStyle({
-      height: "150px",
-      width: "300px",
-      color: "#222",
-      background: "pink.700",
+      padding: "1.5rem 2rem",
+      color: "#0f0f0f",
+      background: "pink.500",
     });
   });
 });
